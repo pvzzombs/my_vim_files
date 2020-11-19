@@ -7,6 +7,7 @@
 1. Download the zip file or clone this repository  
 2. Extract it to your home directory, e.g. `C:\users\user\`  
 3. Make sure to restart vim to take effect.  
+4. Type `:PluginInstall` to install the required files :-)
 
 ### Screenshots:
 

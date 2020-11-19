@@ -11,9 +11,9 @@
 ### Screenshots:
 
 <p align="center">
-  <img src="#" alt="#"/>
+  <img src="https://raw.githubusercontent.com/pvzzombs/my_vim_files/master/pic1.PNG" alt="The resulting vim editor"/>
 </p>
 
 <p align="center">
-  <img src="#" alt="#"/>
+  <img src="https://raw.githubusercontent.com/pvzzombs/my_vim_files/master/pic2.PNG" alt="Another view"/>
 </p>

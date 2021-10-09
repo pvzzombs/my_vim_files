@@ -83,41 +83,27 @@ map <leader>q gqip
 "map <leader>l :set list!<CR> 
 
 "support for yaml syntax
-au BufNewFile,BufRead *.yaml,*.yml so ~/vimfiles/syntax/yaml.vim
+"au BufNewFile,BufRead *.yaml,*.yml so ~/vimfiles/syntax/yaml.vim
 
-set t_Co=256
-set background=dark
-let g:solarized_termcolors=256
-let g:solarized_termtrans=1
+"set t_Co=256
+"set background=dark
+"let g:solarized_termcolors=256
+"let g:solarized_termtrans=1
 
-set cursorline
+if has("gui_running")
+  if has("gui_gtk2")
+    set guifont=Monospace\ 14
+  elseif has("gui_win32")
+    set guifont=Consolas:h14:cANSI
+  endif
+endif
+
+"set cursorline
+
+"let g:lightline = {
+"      \ 'colorscheme': 'ironman',
+"      \ }
 
 "enable only if it's present in your ~/vimfiles/colors or ~/.vim/colors
-colorscheme monokai_pro
+colorscheme ironman
 
-set guifont=Cascadia_Mono:h11,Consolas:h11,Lucida_Console:h11,Fixedsys:h9
-
-"setlocal omnifunc=syntaxcomplete#Complete
-
-"if has("autocmd") && exists("+omnifunc")
-"  autocmd Filetype *
-"          \	if &omnifunc == "" |
-"          \		setlocal omnifunc=syntaxcomplete#Complete |
-"          \	endif
-"endif
-
-"function! OpenCompletion()
-"    if !pumvisible() && ((v:char >= 'a' && v:char <= 'z') || (v:char >= 'A' && v:char <= 'Z'))
-"        call feedkeys("\<C-x>\<C-o>", "nt")
-"    endif
-"endfunction
-
-"autocmd InsertCharPre * call OpenCompletion()
-
-
-set rtp+=~/vimfiles/bundle/vundle
-call vundle#rc()
-
-Bundle 'gmarik/vundle'
-Bundle 'scrooloose/nerdtree'
-"Bundle 'sheerun/vim-polyglot'
